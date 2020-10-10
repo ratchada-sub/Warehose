@@ -32,6 +32,8 @@ import Login from './component/content/Login';
 import Customer from './component/content/Customer';
 import Drink from './component/content/Drink';
 import Product from './component/content/Product'
+import Shop from './component/content/Shop';
+import Register from './component/content/Register';
 function App() {
   const Stack = createStackNavigator();
 
@@ -39,7 +41,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          headerShown: true,
+          headerShown: false,
         }}
         initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
@@ -47,6 +49,8 @@ function App() {
         <Stack.Screen name="Customer" component={Customer} />
         <Stack.Screen name="Drink" component={Drink} />
         <Stack.Screen name="Product" component={Product} />
+        <Stack.Screen name="Shop" component={Shop} />
+        <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );

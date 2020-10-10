@@ -21,12 +21,12 @@ import {
 
 import {TextInput} from 'react-native-gesture-handler';
 
-function Topper({navigation}) {
+function Topper(props) {
   return (
     <View style={styles.NavbarTop}>
       <TouchableOpacity
         style={styles.ButtonCart}
-        onPress={() => navigation.navigate('Home')}>
+        onPress={() => props.navigation.navigate('Home')}>
         <View style={styles.Cart}>
           <FontAwesomeIcon
             icon={faCartPlus}
@@ -49,7 +49,7 @@ function Topper({navigation}) {
       </View>
       <TouchableOpacity
         style={styles.ButtonBars}
-        onPress={() => navigation.navigate('Home')}>
+        onPress={() => props.navigation.navigate('Home')}>
         <FontAwesomeIcon icon={faBars} style={styles.barsIcon} color="yellow" />
       </TouchableOpacity>
     </View>

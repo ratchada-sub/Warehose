@@ -1,6 +1,6 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faCoffee,faUser,faUnlock} from '@fortawesome/free-solid-svg-icons';
+import {faCoffee, faUser, faUnlock,faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {
   SafeAreaView,
   StyleSheet,
@@ -23,7 +23,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-function Login({navigation}) {
+function Register({navigation}) {
   const image = {uri: '../../assets/wh2.jpg'};
 
   return (
@@ -51,7 +51,44 @@ function Login({navigation}) {
                 name="ios-search"
                 color="#000"
               />
-              <TextInput style={styles.Textusername}  placeholder="Password" secureTextEntry={true} />
+              <TextInput
+                style={styles.Textusername}
+                placeholder="Password"
+                secureTextEntry={true}
+              />
+            </View>
+          </View>
+          <View style={{margin: 5}}>
+            <View style={styles.searchSection}>
+              <FontAwesomeIcon
+                icon={faUser}
+                style={styles.searchIcon}
+                name="ios-search"
+                color="#000"
+              />
+              <TextInput style={styles.Textusername} placeholder="First Name" />
+            </View>
+          </View>
+          <View style={{margin: 5}}>
+            <View style={styles.searchSection}>
+              <FontAwesomeIcon
+                icon={faUser}
+                style={styles.searchIcon}
+                name="ios-search"
+                color="#000"
+              />
+              <TextInput style={styles.Textusername} placeholder="Last Name" />
+            </View>
+          </View>
+          <View style={{margin: 5}}>
+            <View style={styles.searchSection}>
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                style={styles.searchIcon}
+                name="ios-search"
+                color="#000"
+              />
+              <TextInput style={styles.Textusername} placeholder="Email" />
             </View>
           </View>
           <View>
@@ -135,4 +172,4 @@ const styles = StyleSheet.create({
   },
   TextIcon: {},
 });
-export default Login;
+export default Register;

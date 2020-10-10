@@ -9,7 +9,7 @@ function Product({route, navigation}) {
     <View style={styles.container}>
       <View style={styles.HeaderTop}>
         <View style={styles.Top}>
-          <Topper />
+          <Topper navigation={navigation} />
         </View>
         <View style={styles.Top}>
           <Header typeText={typeText} navigation={navigation} />

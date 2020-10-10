@@ -34,7 +34,8 @@ function Home({ navigation }) {
         </View>
         <View style={styles.Button}>
           <View>
-            <TouchableOpacity style={styles.ButtonSignUp}>
+            <TouchableOpacity style={styles.ButtonSignUp}
+             onPress={() => navigation.navigate('Register')}>
               <Text style={styles.TextSignUp}> Sign Up</Text>
             </TouchableOpacity>
           </View>

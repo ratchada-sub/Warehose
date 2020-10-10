@@ -28,15 +28,21 @@ import {
 import Topper from './widget/Topper';
 import {TextInput} from 'react-native-gesture-handler';
 import ProductType from './widget/ProductType';
-function Customer({navigation}) {
+import ProductItems from './ProductItems';
+
+function Customer({route, navigation}) {
+  const {shopName} = route.params;
   return (
     <View style={styles.container}>
       <View style={styles.HeaderTop}>
-        <Topper />
-        <ProductType navigation={navigation}/>
+        <Topper navigation={navigation} />
+        <ProductType navigation={navigation} />
+      </View>
+      <View style={styles.brand}>
+        <Text style={styles.brandText}>{shopName}</Text>
       </View>
       <View>
-        <Text>Product</Text>
+        <ProductItems />
       </View>
     </View>
   );
@@ -48,5 +54,19 @@ const styles = StyleSheet.create({
   HeaderTop: {
     backgroundColor: 'yellow',
   },
+  brand: {
+    flex:1,
+    alignItems:'center',
+    marginTop:30
+  },
+  brandText:{
+    fontSize:30,
+    fontWeight:'bold',
+    backgroundColor:'#000',
+    borderWidth:1,
+    borderRadius:10,
+    color:'yellow',
+    padding:5
+  }
 });
 export default Customer;
